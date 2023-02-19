@@ -1,8 +1,8 @@
-function isFloat(n: number) {
-    return n === n && n % 1 !== 0;
+function isFloat(n: number){
+    return Number(n) === n && n % 1 !== 0;
 }
-function isInt(n: number) {
-    return n % 1 === 0;
+function isInt(n: number){
+    return Number(n) === n && n % 1 === 0;
 }
 
 const regex: RegExp = /[^A-Za-z]/ig && /[0-9]/;

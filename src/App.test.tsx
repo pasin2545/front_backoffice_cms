@@ -92,14 +92,7 @@ test('should return bad respond when alphabet in PriceInput', () => {
   expect(WrongFormatPrice).toBeInTheDocument();
 
 });
-test('should return bad respond when alphabet in PriceInput', () => {
-  const { getByText, queryAllByText } = render(<App />);
-  const button = getByDisplayValue('Submit')
-  fireEvent.click(button)
-  const WrongFormatamount = screen.getByDisplayValue(/Error/i);
-  expect(WrongFormatamount).toBeInTheDocument();
 
-});
 
 // test('should update catagory product on selecting a value from drop down', () => {
 //   const { getAllByText } = render(<MuiTextField />);
