@@ -33,8 +33,9 @@ test('should have choose file button', () => {
 });
 
 describe('should find value in text field when click button', () => {
-  const { getByText, getByPlaceholderText } = render(<App />)
+  const { getByText } = render(<App />)
   const button = getByText('Submit')
+  
   test('in NameInput', () => { 
     const inputName = screen.getByText('Name')
     fireEvent.click(button)
@@ -47,20 +48,17 @@ describe('should find value in text field when click button', () => {
     expect(inputPrice).toHaveValue()
   })
   
-  test('in PriceInput', () => { 
-    const inputPrice = screen.getByText('Price')
+  test('in AmountInput', () => { 
+    const inputAmount = screen.getByText('Amount')
     fireEvent.click(button)
-    expect(inputPrice).toHaveValue()
+    expect(inputAmount).toHaveValue()
   })
 
-  
-  
-  const inputAmount = screen.getByText('Amount')
-  const inputDescription = screen.getByText('Description')
-  
-  
-  expect(inputAmount).toHaveValue()
-  expect(inputDescription).toHaveValue()
+  test('in DescriptionInput', () => { 
+    const inputDescription = screen.getByText('Description')
+    fireEvent.click(button)
+    expect(inputDescription).toHaveValue()
+  })
 });
 
 test('should update catagory product on selecting a value from drop down', () => {
