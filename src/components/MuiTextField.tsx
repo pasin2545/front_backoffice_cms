@@ -24,11 +24,9 @@ const currencies = [
 
 export interface Data_of_product {
     name_product: string;
-    price_product_value: Int;
-    Amount_value: Int;
 }
 
-const [name_product_value, set_name_Value] = useState<Data_of_product>('');
+const [name_product_value, set_name_Value] = useState<Data_of_product>({name_product:''});
 const [price_product_value, set_price_Value] = useState('')
 const [Amount_value, set_amount_Value] = useState('')
 

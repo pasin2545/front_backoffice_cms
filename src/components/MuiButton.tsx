@@ -4,12 +4,13 @@ import { useState } from "react";
 
 //const 
 
-export const MuiButton = () => {
+export const MuiButton = ({xxx: string}) => {
     const [clickedButton, setClickedButton] = useState('');
     
 
     return (
         <div>
+            xxx
             <Button variant='contained' onClick={() => alert()}>Confirm</Button>
         </div>
     )
