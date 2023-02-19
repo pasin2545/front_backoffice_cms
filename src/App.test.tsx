@@ -35,7 +35,7 @@ test('should have choose file button', () => {
 describe('should find value in text field when click button', () => {
   const { getByText } = render(<App />)
   const button = getByText('Submit')
-  
+
   test('in NameInput', () => { 
     const inputName = screen.getByText('Name')
     fireEvent.click(button)
@@ -79,11 +79,27 @@ test('should return bad respond when number in NameInput', () => {
   const { getByText, queryAllByText } = render(<App />);
   const button = getByText('Submit')
   fireEvent.click(button)
-  const errorN = screen.getByText(/Error/i);
-  expect(errorN).toBeInTheDocument();
+  const WrongFormatName = screen.getByText(/Error/i);
+  expect(WrongFormatName).toBeInTheDocument();
 
 });
 
+test('should return bad respond when alphabet in PriceInput', () => {
+  const { getByText, queryAllByText } = render(<App />);
+  const button = getByText('Submit')
+  fireEvent.click(button)
+  const WrongFormatPrice = screen.getByText(/Error/i);
+  expect(WrongFormatPrice).toBeInTheDocument();
+
+});
+test('should return bad respond when alphabet in PriceInput', () => {
+  const { getByText, queryAllByText } = render(<App />);
+  const button = getByDisplayValue('Submit')
+  fireEvent.click(button)
+  const WrongFormatamount = screen.getByDisplayValue(/Error/i);
+  expect(WrongFormatamount).toBeInTheDocument();
+
+});
 
 // test('should update catagory product on selecting a value from drop down', () => {
 //   const { getAllByText } = render(<MuiTextField />);
