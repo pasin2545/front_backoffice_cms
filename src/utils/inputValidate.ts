@@ -5,7 +5,7 @@ function isInt(n: number) {
     return n % 1 === 0;
 }
 
-const regex: RegExp = /[^A-Za-z]/ig;
+const regex: RegExp = /[^A-Za-z]/ig && /[0-9]/;
 const regex2: RegExp = /[0-9]/;
 
 export const checkName = (name: string)=> {
