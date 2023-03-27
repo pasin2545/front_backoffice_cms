@@ -1,5 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
 .App {
   margin-left: inherit;
+  background: darkgray;
+  width: 100%;
+  max-width: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 

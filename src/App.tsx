@@ -8,6 +8,7 @@ import { MuiTextField } from './components/MuiTextField';
 import { ImageImport } from './components/ImageImport';
 import { MuiButton } from './components/MuiButton';
 import { FormComponent } from './components/FormComponent';
+import Navbar from './components/Navbar/Navbar';
 // import { callapi } from './redux/callsAPI';
 
 const Page = styled(Box)(() => ({
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <Page >
+      <Navbar/>
       <FormComponent />
       <ImageImport />
     </Page>

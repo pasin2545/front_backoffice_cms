@@ -1,14 +1,20 @@
-//  import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import "./NavbarStyles.css"
 
-// const Navbar = () => {
-//     return (
-//         <View>
-//             <Text>Navbar</Text>
-//         </View>
-//     )
-// }
+function Navbar() {
+    return (
+        <>
+            <nav>
+                <a>
+                    <div>
+                        <ul id="navbar">
+                            <li><a className="active" href="index.html">AddGoods</a></li>
+                            <li><a href="index.html">Stock</a></li>
+                        </ul>
+                    </div>
+                </a>
+            </nav>
+        </>
+    )
+}
 
-// export default Navbar
-
-// const styles = StyleSheet.create({})
+export default Navbar;
