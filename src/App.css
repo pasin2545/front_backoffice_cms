@@ -16,5 +16,15 @@
   align-items: center;
 }
 
+/* .MuiInputBase-input{
+  background: azure;
+}
 
+.MuiTextField-root{
+  background: azure;
+} */
+
+.MuiInputBase-root {
+  background-color: azure;
+}
 
