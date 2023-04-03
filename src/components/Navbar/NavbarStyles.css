@@ -36,6 +36,7 @@ nav{
 #navbar li a.active{
     color: #17cf97;
 }
+
 #navbar li a:hover::after,
 #navbar li a.active::after{
     content: "";

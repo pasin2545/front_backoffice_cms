@@ -1,10 +1,7 @@
-import { InputAdornment, Stack, TextField, MenuItem, Backdrop } from "@mui/material"
-import { Int } from "anchor-link";
-import { type } from "os";
+import { InputAdornment, Stack, TextField, MenuItem, Backdrop, Select, FormControl, InputLabel } from "@mui/material"
 import React, { Children } from "react";
 import { useState } from "react"
 import './MuiTextField.css'
-import { makeStyles } from '@material-ui/styles'
 
 
 const currencies = [
@@ -26,18 +23,11 @@ const currencies = [
     },
 ];
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        "& .MuiFilledInput-root": {
-            background: "rgb(232, 241, 250)"
-        }
-    }
-}));
-
 export const MuiTextField: React.FC<{ setXXX: React.Dispatch<React.SetStateAction<string>> }> = ({ setXXX }) => {
     const [name_product_value, set_name_Value] = useState('');
     const [price_product_value, set_price_Value] = useState('');
     const [Amount_value, set_amount_Value] = useState('')
+    const [age, setAge] = useState('');
 
 
     return (
@@ -87,20 +77,30 @@ export const MuiTextField: React.FC<{ setXXX: React.Dispatch<React.SetStateActio
                 />
             </Stack>
             <Stack direction='row' spacing={2}>
-                <TextField
-                    id="filled-select-currency"
-                    select
-                    label="Select"
-                    defaultValue="EUR"
-                    helperText="Please select your currency"
-                    variant="filled"
-                >
-                    {currencies.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                            {option.label}
+                <FormControl required sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel id="required-label">Select type</InputLabel>
+                    <Select
+                        labelId="filled-select-currency"
+                        id="select-currency"
+                        label="Select type *"
+                        // defaultValue="EUR"
+                        // helperText="Please select your currency"
+                        variant="filled"
+                        value={age}
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
                         </MenuItem>
-                    ))}
-                </TextField>
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                        <MenuItem value={30}>Thirty</MenuItem>
+                        {currencies.map((option) => (
+                            <MenuItem key={option.value} value={option.value}>
+                                {option.label}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
             </Stack>
             <Stack direction='row' spacing={2}>
                 <TextField
